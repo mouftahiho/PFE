@@ -16,7 +16,7 @@ import javax.persistence.Id;
 public class Adresse {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idAdr;
+    long idAdr;
     String ville,adresse,pays;
     int codep;
 
@@ -25,5 +25,48 @@ public class Adresse {
         this.adresse = adresse;
         this.pays = pays;
         this.codep = codep;
+    }
+
+    public long getIdAdr() {
+        return idAdr;
+    }
+
+    public void setIdAdr(int idAdr) {
+        this.idAdr = idAdr;
+    }
+
+    public String getVille() {
+        return ville;
+    }
+
+    public void setVille(String ville) {
+        this.ville = ville;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public String getPays() {
+        return pays;
+    }
+
+    public void setPays(String pays) {
+        this.pays = pays;
+    }
+
+    public int getCodep() {
+        return codep;
+    }
+
+    public void setCodep(int codep) {
+        this.codep = codep;
+    }
+
+    public Adresse() {
     }
 }

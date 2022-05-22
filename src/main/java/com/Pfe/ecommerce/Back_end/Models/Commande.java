@@ -25,4 +25,28 @@ public class Commande {
         this.dateCmd = dateCmd;
         this.methodePay = methodePay;
     }
+
+    public int getIdCmd() {
+        return idCmd;
+    }
+
+    public void setIdCmd(int idCmd) {
+        this.idCmd = idCmd;
+    }
+
+    public Date getDateCmd() {
+        return dateCmd;
+    }
+
+    public void setDateCmd(Date dateCmd) {
+        this.dateCmd = dateCmd;
+    }
+
+    public String getMethodePay() {
+        return methodePay;
+    }
+
+    public void setMethodePay(String methodePay) {
+        this.methodePay = methodePay;
+    }
 }

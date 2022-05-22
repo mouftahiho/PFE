@@ -26,4 +26,28 @@ public class Categorie {
 
     public Categorie() {
     }
+
+    public int getIdCatg() {
+        return idCatg;
+    }
+
+    public void setIdCatg(int idCatg) {
+        this.idCatg = idCatg;
+    }
+
+    public String getLibelle() {
+        return libelle;
+    }
+
+    public void setLibelle(String libelle) {
+        this.libelle = libelle;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
