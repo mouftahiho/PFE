@@ -17,7 +17,7 @@ import java.util.Date;
 public class Commande {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idCmd;
+    long idCmd;
     Date dateCmd;
     String methodePay;
 
@@ -26,27 +26,5 @@ public class Commande {
         this.methodePay = methodePay;
     }
 
-    public int getIdCmd() {
-        return idCmd;
-    }
 
-    public void setIdCmd(int idCmd) {
-        this.idCmd = idCmd;
-    }
-
-    public Date getDateCmd() {
-        return dateCmd;
-    }
-
-    public void setDateCmd(Date dateCmd) {
-        this.dateCmd = dateCmd;
-    }
-
-    public String getMethodePay() {
-        return methodePay;
-    }
-
-    public void setMethodePay(String methodePay) {
-        this.methodePay = methodePay;
-    }
 }

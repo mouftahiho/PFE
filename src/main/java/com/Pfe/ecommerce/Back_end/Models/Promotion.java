@@ -15,7 +15,7 @@ import java.util.Date;
 public class Promotion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idPrmm;
+    long idPrmm;
     Date dateD,DateF;
     int taux;
 

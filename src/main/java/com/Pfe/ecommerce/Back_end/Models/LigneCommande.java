@@ -16,7 +16,7 @@ import javax.persistence.Id;
 public class LigneCommande {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idLigneCmd;
+    long idLigneCmd;
     int qte;
     double prixAchat;
 

@@ -26,7 +26,7 @@ public class CategorieSImpl implements CategorieS {
 
     @Override
     public Categorie modify(Categorie ctg) {
-        Categorie oldCtg = categorieRep.findById(ctg.getIdCat()).get();
+        Categorie oldCtg = categorieRep.findById(ctg.getIdCatg()).get();
         oldCtg.setDescription(ctg.getDescription());
         oldCtg.setLibelle(ctg.getLibelle());
         return categorieRep.save(oldCtg);

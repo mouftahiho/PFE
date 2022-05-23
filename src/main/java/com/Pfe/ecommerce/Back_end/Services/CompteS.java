@@ -8,10 +8,10 @@ import java.util.List;
 
 public interface CompteS {
 
-    Compte save(Compte clt);
-    Compte modify(Compte clt);
-    void remove(long idClt);
-    Compte getById(long idClt);
+    Compte save(Compte compte);
+    Compte modify(Compte compte);
+    void remove(long idCompte);
+    Compte getById(long idCompte);
     List<Compte> getAll();
-    List <Compte> Find(String clt);
+    //List <Compte> Find(String compte);
 }

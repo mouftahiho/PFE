@@ -17,7 +17,7 @@ public class Expedition {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idExp;
+    long idExp;
     String moyenEx,etat,numSuivi;
 
     public Expedition(String moyenEx, String etat, String numSuivi) {

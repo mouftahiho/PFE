@@ -8,10 +8,10 @@ import java.util.List;
 
 public interface ExpeditionS {
 
-    Expedition save(Expedition clt);
-    Expedition modify(Expedition clt);
-    void remove(long idClt);
-    Expedition getById(long idClt);
+    Expedition save(Expedition exp);
+    Expedition modify(Expedition exp);
+    void remove(long idExp);
+    Expedition getById(long idExp);
     List<Expedition> getAll();
-    List <Expedition> Find(String clt);
+    List <Expedition> Find(String exp);
 }

@@ -27,7 +27,7 @@ public class CommandeSImpl implements CommandeS {
 
     @Override
     public Commande modify(Commande cmd) {
-        Commande oldCommande = commandeRep.findById(cmd.getIdCmd).get();
+        Commande oldCommande = commandeRep.findById(cmd.getIdCmd()).get();
         oldCommande.setDateCmd(cmd.getDateCmd());
         oldCommande.setMethodePay(cmd.getMethodePay());
         return commandeRep.save(oldCommande);
@@ -50,7 +50,7 @@ public class CommandeSImpl implements CommandeS {
 
     @Override
     public List<Commande> FindByDate(Date DateCmd) {
-       // return commandeRep.findByDateCmd(DateCmd.getTime()).toString();
+        //return commandeRep.findByDateCmd(DateCmd.getTime()).toString();
         return null;
     }
 }

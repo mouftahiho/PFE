@@ -15,10 +15,13 @@ public class Image {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int IdImg, isPrincipal;
+    long IdImg;
+    String url;
+    int isPrincipal;
 
 
-    public Image(int isPrincipal) {
+    public Image(String url, int isPrincipal) {
+        this.url = url;
         this.isPrincipal = isPrincipal;
     }
 

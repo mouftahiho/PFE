@@ -8,10 +8,9 @@ import java.util.List;
 
 public interface LigneCommandeS {
 
-    LigneCommande save(LigneCommande clt);
-    LigneCommande modify(LigneCommande clt);
-    void remove(long idClt);
-    LigneCommande getById(long idClt);
+    LigneCommande save(LigneCommande lc);
+    LigneCommande modify(LigneCommande lc);
+    void remove(long idLc);
+    LigneCommande getById(long idLc);
     List<LigneCommande> getAll();
-    List <LigneCommande> Find(String clt);
 }

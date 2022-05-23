@@ -7,10 +7,10 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface WishListS {
-    WishList save(WishList clt);
-    WishList modify(WishList clt);
-    void remove(long idClt);
-    WishList getById(long idClt);
+    WishList save(WishList wishList);
+    WishList modify(WishList wishList);
+    void remove(long idWishList);
+    WishList getById(long idWishList);
     List<WishList> getAll();
-    List <WishList> Find(String clt);
+    //List <WishList> Find(String wishList);
 }

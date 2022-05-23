@@ -7,10 +7,10 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface PromotionS  {
-    Promotion save(Promotion clt);
-    Promotion modify(Promotion clt);
-    void remove(long idClt);
-    Promotion getById(long idClt);
+    Promotion save(Promotion prm);
+    Promotion modify(Promotion prm);
+    void remove(long idPrm);
+    Promotion getById(long idPrm);
     List<Promotion> getAll();
-    List <Promotion> Find(String clt);
+    //List <Promotion> Find(String prm);
 }

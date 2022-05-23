@@ -17,7 +17,7 @@ import java.util.Date;
 public class Commentaire {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idCmt;
+    long idCmt;
     String Commentaire;
     Date datePub;
 

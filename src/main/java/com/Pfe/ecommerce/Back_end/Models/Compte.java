@@ -16,7 +16,7 @@ public class Compte {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idCompte;
+    long idCompte;
     String login,mdp,role,question,reponse;
     Date dateCr;
 

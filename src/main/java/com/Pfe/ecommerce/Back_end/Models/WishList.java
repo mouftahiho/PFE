@@ -17,7 +17,7 @@ public class WishList {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int idWL;
+    long idWL;
 
     String libelle;
 

@@ -21,12 +21,12 @@ public class ClientSImpl implements ClientS{
 
     @Override
     public Client save(Client clt) {
-        return clientRep.save();
+        return clientRep.save(clt);
     }
 
     @Override
     public Client modify(Client clt) {
-        Client oldClient = clientRep.findById(clt.getIdCl).get();
+        Client oldClient = clientRep.findById(clt.getIdCl()).get();
         oldClient.setEmail(clt.getEmail());
         oldClient.setNom(clt.getNom());
         oldClient.setPrenom(clt.getPrenom());
@@ -51,7 +51,9 @@ public class ClientSImpl implements ClientS{
     }
 
     @Override
-    public List<Client> FindByTele(String tel) {
-        return clientRep.findByTel(tel);
+    public List<Client> Find(String clt) {
+        return clientRep.findByTel(clt);
     }
+
+
 }

@@ -7,10 +7,9 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface CommentaireS {
-    Commentaire save(Commentaire clt);
-    Commentaire modify(Commentaire clt);
-    void remove(long idClt);
-    Commentaire getById(long idClt);
+    Commentaire save(Commentaire cmt);
+    Commentaire modify(Commentaire cmt);
+    void remove(long idCmt);
+    Commentaire getById(long idCmt);
     List<Commentaire> getAll();
-    List <Commentaire> Find(String clt);
 }

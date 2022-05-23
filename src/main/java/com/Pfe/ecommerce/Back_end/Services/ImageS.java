@@ -8,10 +8,10 @@ import java.util.List;
 
 public interface ImageS {
 
-    Image save(Image clt);
-    Image modify(Image clt);
-    void remove(long idClt);
-    Image getById(long idClt);
+    Image save(Image img);
+    Image modify(Image img);
+    void remove(long idImg);
+    Image getById(long idImg);
     List<Image> getAll();
-    List <Image> Find(String clt);
+    //List <Image> Find(String img);
 }

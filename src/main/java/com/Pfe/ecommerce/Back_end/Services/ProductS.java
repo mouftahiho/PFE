@@ -7,10 +7,10 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface ProductS {
-    Product save(Product clt);
-    Product modify(Product clt);
-    void remove(long idClt);
-    Product getById(long idClt);
+    Product save(Product pr);
+    Product modify(Product pr);
+    void remove(long idPr);
+    Product getById(long idPr);
     List<Product> getAll();
-    List <Product> Find(String clt);
+    //List <Product> Find(String pr);
 }
