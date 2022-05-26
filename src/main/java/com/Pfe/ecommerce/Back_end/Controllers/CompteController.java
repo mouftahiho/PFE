@@ -31,6 +31,11 @@ public class CompteController {
         compteS.remove(idCmpt);
     }
 
+    @GetMapping("/{getCompteById}")
+    public Compte getCompteById(@PathVariable("getCompteById") long idCmpt){
+        return compteS.getById(idCmpt);
+    }
+
     @GetMapping("/getAllCompte")
     public List<Compte> getAllCommentaire(){
         return compteS.getAll();

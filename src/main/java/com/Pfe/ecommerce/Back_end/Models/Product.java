@@ -36,7 +36,4 @@ public class Product {
         this.datePub = datePub;
     }
 
-
-    
-
 }
