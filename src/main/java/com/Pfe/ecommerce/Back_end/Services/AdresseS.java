@@ -11,5 +11,5 @@ public interface AdresseS {
     void remove(long idClt);
     Adresse getById(long idClt);
     List<Adresse> getAll();
-    List <Adresse> Find(String clt);
+    List <Adresse> findByAdresse(String clt);
 }

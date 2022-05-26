@@ -27,7 +27,4 @@ public class Adresse {
         this.codep = codep;
     }
 
-
-    public Adresse() {
-    }
 }

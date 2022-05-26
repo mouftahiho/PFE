@@ -5,6 +5,7 @@ import com.Pfe.ecommerce.Back_end.Repositories.ImageRep;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,7 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.util.List;
 
-
+@Service
 public class ImageSImpl implements ImageS{
 
     @Autowired

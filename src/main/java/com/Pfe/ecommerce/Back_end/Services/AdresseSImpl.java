@@ -20,7 +20,7 @@ public class AdresseSImpl implements AdresseS {
 
     @Override
     public Adresse modify(Adresse newAdresse) {
-        Adresse oldAdresse = (Adresse) adresseRep.findAllById(newAdresse.getIdAdr()).get();
+        Adresse oldAdresse = (Adresse) adresseRep.findById(newAdresse.getIdAdr()).get();
         oldAdresse.setAdresse(newAdresse.getAdresse());
         oldAdresse.setCodep(newAdresse.getCodep());
         oldAdresse.setPays(newAdresse.getPays());
@@ -46,8 +46,8 @@ public class AdresseSImpl implements AdresseS {
     }
 
     @Override
-    public List<Adresse> Find(String adr) {
-        return adresseRep.findByAdresse(adr);
+    public List<Adresse> findByAdresse(String adr) {
+        return adresseRep.findAdresse(adr);
     }
 
 
