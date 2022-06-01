@@ -4,18 +4,17 @@ package com.Pfe.ecommerce.Back_end.Models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
-@Entity(name = "Tcategories")
+@Entity(name = "TCategories")
 public class Categorie {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idCatg")
     long idCatg;
     String libelle,description;
 
@@ -27,4 +26,10 @@ public class Categorie {
     public Categorie() {
     }
 
+    @ManyToOne( cascade = CascadeType.ALL )
+    @JoinColumn( name="idPrd")
+    private Product product;
+
+    @OneToMany(mappedBy = "TCategories")
+    private List<Product> products;
 }

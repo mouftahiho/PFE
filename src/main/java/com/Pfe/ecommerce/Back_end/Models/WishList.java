@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -17,6 +15,7 @@ public class WishList {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idWl")
     long idWL;
 
     String libelle;
@@ -25,5 +24,10 @@ public class WishList {
         this.libelle = libelle;
     }
 
+    @OneToOne(mappedBy = "WishList")
+    private Client client;
+
+    @ManyToMany
+    private List<Product> products;
     
 }

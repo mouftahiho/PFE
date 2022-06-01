@@ -3,11 +3,9 @@ package com.Pfe.ecommerce.Back_end.Models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -30,6 +28,21 @@ public class Client {
         this.tel = tel;
         this.regD = regD;
     }
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "login" , referencedColumnName = "login")
+    private Compte compte;
+
+    @OneToMany(mappedBy = "client")
+    private List<Commentaire> commentaire;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idWishList" , referencedColumnName = "idWl")
+    private WishList wishList;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "idAdress" , referencedColumnName = "idAdress")
+    private Adresse adresse;
 
 
 }

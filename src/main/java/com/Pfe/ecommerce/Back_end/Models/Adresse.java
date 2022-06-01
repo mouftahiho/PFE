@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -16,6 +14,7 @@ import javax.persistence.Id;
 public class Adresse {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idAdress")
     long idAdr;
     String ville,adresse,pays;
     int codep;
@@ -26,5 +25,11 @@ public class Adresse {
         this.pays = pays;
         this.codep = codep;
     }
+
+    @OneToOne(mappedBy = "TAdresse")
+    private Client client;
+
+    @OneToMany(mappedBy = "TAdresse")
+    private List<Expedition> expeditions;
 
 }

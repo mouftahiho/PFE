@@ -4,11 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -17,6 +15,7 @@ import java.util.Date;
 public class Commande {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idCmd")
     long idCmd;
     Date dateCmd;
     String methodePay;
@@ -25,6 +24,9 @@ public class Commande {
         this.dateCmd = dateCmd;
         this.methodePay = methodePay;
     }
+
+    @OneToMany(mappedBy = "TCommande")
+    private List<LigneCommande> ligneCommandes;
 
 
 }

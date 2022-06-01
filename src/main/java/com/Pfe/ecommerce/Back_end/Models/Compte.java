@@ -3,10 +3,7 @@ package com.Pfe.ecommerce.Back_end.Models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Data
@@ -17,7 +14,11 @@ public class Compte {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long idCompte;
-    String login,mdp,role,question,reponse;
+
+    @Column(name = "login")
+    String login;
+
+    String role,mdp,question,reponse;
     Date dateCr;
 
     public Compte(String login, String mdp, String role, String question, String reponse, Date dateCr) {
@@ -31,4 +32,7 @@ public class Compte {
 
     public Compte() {
     }
+
+    @OneToOne(mappedBy = "Compte")
+    private Client client;
 }

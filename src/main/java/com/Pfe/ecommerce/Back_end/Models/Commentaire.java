@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Data
@@ -25,4 +22,12 @@ public class Commentaire {
         Commentaire = commentaire;
         this.datePub = datePub;
     }
+
+    @ManyToOne
+    @JoinColumn(name = "idclient")
+    private Client client;
+
+    @ManyToOne
+    @JoinColumn(name = "idProduit")
+    private Product product;
 }

@@ -4,11 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -20,7 +18,7 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long idPrd;
 
-    String libelle,marque,desc;
+    String libelle,marque,description;
     Double prix,fraisex;
     int disponibilite,qtestock;
     Date datePub;
@@ -28,12 +26,33 @@ public class Product {
     public Product(String libelle, String marque, String desc, Double prix, Double fraisex, int disponibilite, int qtestock, Date datePub) {
         this.libelle = libelle;
         this.marque = marque;
-        this.desc = desc;
+        this.description = desc;
         this.prix = prix;
         this.fraisex = fraisex;
         this.disponibilite = disponibilite;
         this.qtestock = qtestock;
         this.datePub = datePub;
     }
+
+    @OneToMany(mappedBy = "TProduct")
+    private List<Commentaire> commentaire;
+
+    @OneToMany(mappedBy = "TProduct")
+    private List<LigneCommande> ligneCommandes;
+
+    @ManyToOne
+    @JoinColumn(name = "idCatg" , referencedColumnName = "idCatg")
+    private Categorie categorie;
+
+    @OneToMany(mappedBy = "TProduct")
+    private List<Image> image;
+
+    @ManyToOne
+    @JoinColumn(name = "idPrmm",referencedColumnName = "idPrmm")
+    private Promotion promotion;
+
+    @ManyToMany
+    @JoinTable(name = "ItemWishList", joinColumns = @JoinColumn(name = "idWl"), inverseJoinColumns = @JoinColumn(name = "idPrd"))
+    private List<WishList> wishLists;
 
 }
