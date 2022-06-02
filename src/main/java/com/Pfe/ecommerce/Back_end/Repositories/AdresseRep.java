@@ -8,5 +8,5 @@ import java.util.List;
 @Repository
 public interface AdresseRep extends CrudRepository<Adresse,Long> {
 
-    List<Adresse> findAdresse(String Adr);
+    List<Adresse> findByAdresse(String Adr);
 }

@@ -44,13 +44,13 @@ public class AdresseSImpl implements AdresseS {
     public List<Adresse> getAll() {
         return (List<Adresse>) adresseRep.findAll();
     }
-/*
+
     @Override
     public List<Adresse> findByAdresse(String adr) {
-        return adresseRep.findAdresse(adr);
+        return adresseRep.findByAdresse(adr);
     }
 
- */
+
 
 
 }
