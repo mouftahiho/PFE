@@ -25,7 +25,7 @@ public class Promotion {
         this.taux = taux;
     }
 
-    @OneToMany(mappedBy = "TPromotion")
+    @OneToMany(mappedBy = "promotion")
     private List<Product> products;
 
 }

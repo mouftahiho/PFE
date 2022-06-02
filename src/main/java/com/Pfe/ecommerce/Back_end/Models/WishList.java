@@ -24,7 +24,7 @@ public class WishList {
         this.libelle = libelle;
     }
 
-    @OneToOne(mappedBy = "WishList")
+    @OneToOne(mappedBy = "wishList")
     private Client client;
 
     @ManyToMany

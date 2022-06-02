@@ -25,7 +25,7 @@ public class Commande {
         this.methodePay = methodePay;
     }
 
-    @OneToMany(mappedBy = "TCommande")
+    @OneToMany(mappedBy = "commande")
     private List<LigneCommande> ligneCommandes;
 
 

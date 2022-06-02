@@ -29,7 +29,7 @@ public class ProductSImpl implements ProductS{
     @Override
     public Product modify(Product newPr) {
         Product oldPr= productRep.findById(newPr.getIdPrd()).get();
-        oldPr.setDesc(newPr.getDesc());
+        oldPr.setDescription(newPr.getDescription());
         oldPr.setDisponibilite(newPr.getDisponibilite());
         oldPr.setFraisex(newPr.getFraisex());
         oldPr.setLibelle(newPr.getLibelle());

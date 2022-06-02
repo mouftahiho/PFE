@@ -33,6 +33,6 @@ public class Compte {
     public Compte() {
     }
 
-    @OneToOne(mappedBy = "Compte")
+    @OneToOne(mappedBy = "compte")
     private Client client;
 }

@@ -30,6 +30,6 @@ public class Categorie {
     @JoinColumn( name="idPrd")
     private Product product;
 
-    @OneToMany(mappedBy = "TCategories")
+    @OneToMany(mappedBy = "categorie")
     private List<Product> products;
 }

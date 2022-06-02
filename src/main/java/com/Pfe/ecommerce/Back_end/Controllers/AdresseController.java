@@ -2,6 +2,7 @@ package com.Pfe.ecommerce.Back_end.Controllers;
 
 import com.Pfe.ecommerce.Back_end.Models.Adresse;
 import com.Pfe.ecommerce.Back_end.Services.AdresseS;
+import com.Pfe.ecommerce.Back_end.Services.AdresseSImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,10 +37,12 @@ public class AdresseController {
     public List<Adresse> getAllAdresse(){
         return adresseS.getAll();
     }
-
+/*
     @GetMapping("/findByAdr")
     public List<Adresse> getByAdresses(String adr){
         return adresseS.findByAdresse(adr);
-    }
+      }
+ */
+
 
 }

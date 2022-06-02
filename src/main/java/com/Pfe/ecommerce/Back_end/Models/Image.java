@@ -12,6 +12,7 @@ public class Image {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idImg")
     long IdImg;
     String url;
     int isPrincipal;
@@ -25,6 +26,6 @@ public class Image {
     public Image() {
     }
     @ManyToOne
-    @JoinColumn(name = "idImg" , referencedColumnName = "idImg")
+    @JoinColumn(name = "idPrd" , referencedColumnName = "idPrd")
     private Product product;
 }

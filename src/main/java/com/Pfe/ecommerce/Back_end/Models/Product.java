@@ -34,17 +34,17 @@ public class Product {
         this.datePub = datePub;
     }
 
-    @OneToMany(mappedBy = "TProduct")
+    @OneToMany(mappedBy = "product")
     private List<Commentaire> commentaire;
 
-    @OneToMany(mappedBy = "TProduct")
+    @OneToMany(mappedBy = "product")
     private List<LigneCommande> ligneCommandes;
 
     @ManyToOne
     @JoinColumn(name = "idCatg" , referencedColumnName = "idCatg")
     private Categorie categorie;
 
-    @OneToMany(mappedBy = "TProduct")
+    @OneToMany(mappedBy = "product")
     private List<Image> image;
 
     @ManyToOne

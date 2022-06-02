@@ -26,10 +26,10 @@ public class Adresse {
         this.codep = codep;
     }
 
-    @OneToOne(mappedBy = "TAdresse")
+    @OneToOne(mappedBy = "adresse")
     private Client client;
 
-    @OneToMany(mappedBy = "TAdresse")
+    @OneToMany(mappedBy = "adresse")
     private List<Expedition> expeditions;
 
 }
